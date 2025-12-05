@@ -119,7 +119,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const yearElement = document.querySelector('.footer p');
     if (yearElement) {
         const currentYear = new Date().getFullYear();
-        yearElement.innerHTML = yearElement.innerHTML.replace('2024', currentYear);
+        const yearPattern = /\d{4}/;
+        yearElement.innerHTML = yearElement.innerHTML.replace(yearPattern, currentYear);
     }
 
     // ===========================
